@@ -1,0 +1,35 @@
+@import url(./vender/normalize.css);
+@import url(./vender/fonts/fonts.css);
+
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: 'Inter', 'Arial', sans-serif;
+  background: #000;
+  color: #fff;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.content__center {
+  margin: 0 200px;
+}
+
+.header {
+  max-width: 880px;
+  display: flex;
+  margin-top: 45px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #545454;
+}
+
+.header__logo {
+  align-self: flex-start;
+  margin-bottom: 41px;
+}
+
