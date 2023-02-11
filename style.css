@@ -122,3 +122,15 @@
   border: none;
   align-self: center;
 }
+.footer {
+  display: flex;
+  margin-top: 66px;
+  margin-bottom: 60px;
+}
+.footer__copyright {
+  color: #545454;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  margin: 0;
+}
