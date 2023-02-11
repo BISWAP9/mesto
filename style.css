@@ -37,11 +37,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0;
 }
 .profile__avatar {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .profile__info {
   display: flex;
@@ -81,6 +83,7 @@
   background-size: cover;
   background-position: center;
   background-color: transparent;
+  margin: 35px 0;
 }
 
 .elements {
