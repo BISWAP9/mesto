@@ -11,7 +11,7 @@
 
 <body class="page">
 
-  <header class="header content__center">
+  <header class="header">
     <img src="./images/Vector.svg" alt="логотип" class="header__logo">
   </header>
 
@@ -79,9 +79,34 @@
   </main>
 
   <footer class="footer content__center">
-    <p class="footer__copyright">© 2020 Mesto Russia</p>
+    <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
   </footer>
 
+  <section class="popup">
+    <div class="popup__edit">
+      <button class="popup__button-close"></button>
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form action="" class="popup__form">
+        <input type="text" placeholder="Имя пользователя" class="popup__input">
+        <input type="text" placeholder="Должность" class="popup__input">
+        <button class="popup__button-save">Сохранить</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    const popup = document.querySelector('.popup');
+    popup.hidden = true;
+    const openPopup = document.querySelector('.profile__button-edit');
+    const closePopup = document.querySelector('.popup__button-close');
+
+    openPopup.addEventListener('click', () => {
+      popup.hidden = false;
+    });
+
+    closePopup.addEventListener('click', () => {
+      popup.hidden = true;
+    });
+  </script>
 </body>
 
 </html>
