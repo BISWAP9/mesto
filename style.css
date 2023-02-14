@@ -4,6 +4,8 @@
 
 .page {
   max-width: 1280px;
+  min-width: 320px;
+  box-sizing: border-box;
   margin: 0 auto;
   font-family: 'Inter', 'Arial', sans-serif;
   background: #000;
@@ -95,6 +97,9 @@
   font-size: 42px;
   line-height: 1.14;
   margin: 0 18px 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   .profile__title {
@@ -109,6 +114,9 @@
   font-size: 18px;
   line-height: 1.22;
   margin: 16px 0 25px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   .profile__subtitle {
@@ -121,10 +129,13 @@
 }
 .profile__button-edit {
   background-image: url("./images/Edit_Button.svg");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
   background-position: center;
   background-color: transparent;
-  width: 24px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  min-width: 24px;
   height: 24px;
 }
 .profile__button-add {
@@ -177,6 +188,9 @@
   font-style: 24px;
   line-height: 1.2;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .element__button-like {
   width: 22px;
@@ -213,23 +227,27 @@
   top: 0;
   left: 0;
   position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
-.popup__edit {
+.popup_opened {
+  display: flex;
+}
+.popup__container {
   background-color: #fff;
   padding: 34px 36px 37px;
   border-radius: 10px;
   max-width: 430px;
   min-height: 330px;
-  transform: translate(0, 58%);
-  margin: 0 auto;
+  position: relative;
   box-sizing: border-box;
 }
 @media (max-width: 1023px) {
-  .popup__edit {
+  .popup__container {
     max-width: 282px;
     min-height: 322px;
     padding: 25px 22px;
-    transform: translateY(40%);
   }
 }
 .popup__button-close {
