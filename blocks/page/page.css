@@ -12,4 +12,5 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  transition: all 0s ease;
 }
