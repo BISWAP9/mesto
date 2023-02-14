@@ -1,0 +1,5 @@
+.profile__info-user {
+  display: flex;
+  align-items: baseline;
+  margin-top: 22px;
+}
