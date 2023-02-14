@@ -8,6 +8,12 @@
   border: 1px solid #fff;
   min-width: 24px;
   height: 24px;
+  transition: opacity .5s ease-in;
+}
+
+.profile__button-edit:hover {
+  opacity: .6;
+  cursor: pointer;
 }
 
 @media (max-width: 760px) {

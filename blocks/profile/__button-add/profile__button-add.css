@@ -8,6 +8,12 @@
   background-color: transparent;
   background-repeat: no-repeat;
   margin: auto 0;
+  transition: opacity .5s ease-in;
+}
+
+.profile__button-add:hover {
+  opacity: .6;
+  cursor: pointer;
 }
 
 @media (max-width: 1023px) {

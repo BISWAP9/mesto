@@ -10,6 +10,12 @@
   background-repeat: no-repeat;
   right: -9%;
   top: -12%;
+  transition: opacity .5s ease-in;
+}
+
+.popup__button-close:hover {
+  opacity: .6;
+  cursor: pointer;
 }
 
 @media (max-width: 1023px) {

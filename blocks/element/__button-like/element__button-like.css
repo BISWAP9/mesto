@@ -8,4 +8,11 @@
   background-position: center;
   align-self: center;
   background-repeat: no-repeat;
+  transition: opacity .5s ease-in;
 }
+
+.element__button-like:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
