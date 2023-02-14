@@ -47,6 +47,8 @@
   .header__logo {
     margin-left: 27px;
     margin-bottom: 31.6px;
+    width: 103.74px;
+    height: 24.4px;
   }
 }
 .profile {
@@ -81,10 +83,12 @@
 }
 .profile__info-column {
   margin-left: 30px;
+  max-width: 440px;
 }
 @media (max-width: 1023px) {
   .profile__info-column {
     margin: 0 auto;
+    max-width: 280px;
   }
 }
 .profile__info-user {
@@ -113,7 +117,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.22;
-  margin: 16px 0 25px;
+  margin: 10px 0 25px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -124,7 +128,7 @@
     line-height: 1.21;
     text-align: center;
     margin-top: 14px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 }
 .profile__button-edit {
@@ -138,6 +142,12 @@
   min-width: 24px;
   height: 24px;
 }
+@media (max-width: 760px) {
+  .profile__button-edit {
+    min-width: 18px;
+    height: 18px;
+  }
+}
 .profile__button-add {
   width: 150px;
   height: 50px;
@@ -147,7 +157,7 @@
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
-  margin: 35px 0;
+  margin: auto 0;
 }
 @media (max-width: 1023px) {
   .profile__button-add {
@@ -157,13 +167,14 @@
 .elements {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-  margin-top: 50px;
+  margin-top: 40px;
   row-gap: 20px;
   column-gap: 17px;
 }
 @media (max-width: 1023px) {
   .elements {
-    margin-top: 0;
+    margin-top: 33px;
+    row-gap: 10px;
   }
 }
 .element {
@@ -203,7 +214,7 @@
 }
 .footer {
   display: flex;
-  margin-top: 66px;
+  margin-top: 55px;
   margin-bottom: 60px;
 }
 @media (max-width: 1023px) {
@@ -219,7 +230,12 @@
   line-height: 1.22;
   margin: 0;
 }
-
+@media (max-width: 760px) {
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
 .popup {
   width: 100%;
   height: 100%;
@@ -238,7 +254,7 @@
   background-color: #fff;
   padding: 34px 36px 37px;
   border-radius: 10px;
-  max-width: 430px;
+  width: 430px;
   min-height: 330px;
   position: relative;
   box-sizing: border-box;
@@ -260,8 +276,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  right: -10%;
-  top: -14%;
+  right: -9%;
+  top: -12%;
 }
 @media (max-width: 1023px) {
   .popup__button-close {
@@ -277,7 +293,7 @@
   font-weight: 900;
   font-size: 24px;
   line-height: 1.21;
-  margin: 0 0 54px;
+  margin: 0 0 40px;
 }
 @media (max-width: 1023px) {
   .popup__title {
