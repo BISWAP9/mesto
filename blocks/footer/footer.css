@@ -3,7 +3,7 @@
   margin: 55px 200px 60px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
   .footer {
     margin: 48px 19px 36px;
   }
