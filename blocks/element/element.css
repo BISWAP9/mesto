@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 420px) {
   .element {
     max-height: 350px;
   }

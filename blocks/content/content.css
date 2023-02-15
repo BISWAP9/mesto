@@ -1,10 +1,10 @@
-.content__center {
+.content {
   max-width: 880px;
   margin: 0 200px;
 }
 
 @media (max-width: 1023px) {
-  .content__center {
+  .content {
     margin-right: 19px;
     margin-left: 19px;
   }
