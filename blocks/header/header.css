@@ -2,7 +2,8 @@
   display: flex;
   max-width: 880px;
   margin: 45px 200px 40px;
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid rgba(84, 84, 84, 1);
+  opacity: .7;
 }
 
 @media (max-width: 768px) {

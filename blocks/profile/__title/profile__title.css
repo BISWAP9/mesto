@@ -13,6 +13,7 @@
   .profile__title {
     font-size: 27px;
     line-height: 1.22;
+    padding-left: 20px;
     margin-right: 10px;
     text-align: center;
   }
