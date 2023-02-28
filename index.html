@@ -32,48 +32,6 @@
     </section>
 
     <section class="elements" aria-label="фото">
-      <article class="element">
-        <img src="./images/piter-min.jpg" alt="Питер" class="element__photo">
-        <div class="element__info">
-          <h2 class="element__title">Санкт-Петербург</h2>
-          <button class="element__button-like" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img src="./images/samara-min.jpg" alt="Самара" class="element__photo">
-        <div class="element__info">
-          <h2 class="element__title">Самара</h2>
-          <button class="element__button-like" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img src="./images/oren-min.jpg" alt="Оренбург" class="element__photo">
-        <div class="element__info">
-          <h2 class="element__title">Оренбург</h2>
-          <button class="element__button-like" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img src="./images/moscow-min.jpg" alt="Москва" class="element__photo">
-        <div class="element__info">
-          <h2 class="element__title">Москва</h2>
-          <button class="element__button-like" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img src="./images/mahachkala-min.jpg" alt="Махачкала" class="element__photo">
-        <div class="element__info">
-          <h2 class="element__title">Махачкала</h2>
-          <button class="element__button-like" type="button"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img src="./images/kazan-min.jpg" alt="Казань" class="element__photo">
-        <div class="element__info">
-          <h2 class="element__title">Казань</h2>
-          <button class="element__button-like" type="button"></button>
-        </div>
-      </article>
     </section>
 
   </main>
@@ -93,6 +51,29 @@
       </form>
     </div>
   </section>
+
+  <section class="popup">
+    <div class="popup__container">
+      <button class="popup__button-close" type="button"></button>
+      <h3 class="popup__title">Новое место</h3>
+      <form class="popup__form" name="popup-form">
+        <input type="text" placeholder="Имя" class="popup__input popup__input_value_name" name="popup-name">
+        <input type="text" placeholder="О себе" class="popup__input popup__input_value_job" name="popup-job">
+        <button class="popup__button-save" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </section>
+
+  <template id="cardTemplate">
+    <article class="element">
+      <img class="element__photo">
+      <button class="element__button-del" type="button"></button>
+      <div class="element__info">
+        <h2 class="element__title"></h2>
+        <button class="element__button-like" type="button"></button>
+      </div>
+    </article>
+  </template>
 
   <script src="./scripts/index.js"></script>
 

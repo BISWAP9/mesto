@@ -1,9 +1,11 @@
 .element {
+  width: 100%;
   min-height: 361px;
   background-color: #fff;
   border-radius: 10px;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 420px) {
