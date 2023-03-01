@@ -1,12 +1,21 @@
-let popup = document.querySelector('.popup');
 let editProfile = document.querySelector('.profile__button-edit');
-let closeProfile = document.querySelector('.popup__button-close');
+let popupEdit = document.querySelector('.popup__edit');
+let closeProfile = popupEdit.querySelector('.popup__button-close');
 let nameProfile = document.querySelector('.profile__title');
 let jobProfile = document.querySelector('.profile__subtitle');
-let formElement = popup.querySelector('.popup__form');
-let nameInput = popup.querySelector('.popup__input_value_name');
-let jobInput = popup.querySelector('.popup__input_value_job');
+let formElement = popupEdit.querySelector('.popup__form');
+let nameInput = popupEdit.querySelector('.popup__input_value_name');
+let jobInput = popupEdit.querySelector('.popup__input_value_job');
+
+let popupAddPhoto = document.querySelector('.popup__add');
+let addPhoto = document.querySelector('.profile__button-add');
+let closeAddPhoto = popupAddPhoto.querySelector('.popup__button-close');
+let form = popupAddPhoto.querySelector('.popup__form');
+let placeInput = popupAddPhoto.querySelector('.popup__input_value_place');
+let linkInput = popupAddPhoto.querySelector('.popup__input_value_link');
+
 let elements = document.querySelector('.elements');
+
 
 const initialCards = [
   {
@@ -50,29 +59,49 @@ const createCard = (card) => {
   delButton.addEventListener('click', (e) => {
     e.target.closest('.element').remove();
   });
-  elements.append(cardTemplate);
+  elements.prepend(cardTemplate);
 }
 
 initialCards.forEach(createCard);
 
-
-
 editProfile.addEventListener('click', () => {
-  popup.classList.add('popup_opened');
+  popupEdit.classList.add('popup_opened');
   nameInput.value = nameProfile.textContent;
   jobInput.value = jobProfile.textContent;
 });
 
-function formHide () {
-  popup.classList.remove('popup_opened');
-}
+addPhoto.addEventListener('click', () => {
+  popupAddPhoto.classList.add('popup_opened');
+  placeInput.value = '';
+  linkInput.value = '';
+});
 
-function handleFormSubmit (evt) {
-  evt.preventDefault();
+const hideProfilePopup = () => {
+  popupEdit.classList.remove('popup_opened');
+}
+closeProfile.addEventListener('click', hideProfilePopup);
+
+const hideAddPopup = () => {
+  popupAddPhoto.classList.remove('popup_opened');
+}
+closeAddPhoto.addEventListener('click', hideAddPopup);
+
+function handleFormEditSubmit (e) {
+  e.preventDefault();
   nameProfile.textContent = nameInput.value;
   jobProfile.textContent = jobInput.value;
-  formHide();
+  hideProfilePopup();
 }
 
-closeProfile.addEventListener('click', formHide);
-formElement.addEventListener('submit', handleFormSubmit);
+function handleFormAddSubmit (e) {
+  e.preventDefault();
+  const name = placeInput.value;
+  const link = linkInput.value;
+  const card = {name,link};
+  createCard(card);
+  hideAddPopup();
+  }
+
+
+formElement.addEventListener('submit', handleFormEditSubmit);
+form.addEventListener('submit', handleFormAddSubmit)
