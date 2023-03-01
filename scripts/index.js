@@ -16,7 +16,6 @@ let linkInput = popupAddPhoto.querySelector('.popup__input_value_link');
 
 let elements = document.querySelector('.elements');
 
-
 const initialCards = [
   {
     name: 'Архыз',
@@ -64,33 +63,15 @@ const createCard = (card) => {
 
 initialCards.forEach(createCard);
 
-editProfile.addEventListener('click', () => {
-  popupEdit.classList.add('popup_opened');
-  nameInput.value = nameProfile.textContent;
-  jobInput.value = jobProfile.textContent;
-});
-
-addPhoto.addEventListener('click', () => {
-  popupAddPhoto.classList.add('popup_opened');
-  placeInput.value = '';
-  linkInput.value = '';
-});
-
-const hideProfilePopup = () => {
-  popupEdit.classList.remove('popup_opened');
+const hidePopup = (typeOfPopup) => {
+  typeOfPopup.classList.remove('popup_opened');
 }
-closeProfile.addEventListener('click', hideProfilePopup);
-
-const hideAddPopup = () => {
-  popupAddPhoto.classList.remove('popup_opened');
-}
-closeAddPhoto.addEventListener('click', hideAddPopup);
 
 function handleFormEditSubmit (e) {
   e.preventDefault();
   nameProfile.textContent = nameInput.value;
   jobProfile.textContent = jobInput.value;
-  hideProfilePopup();
+  hidePopup(popupEdit);
 }
 
 function handleFormAddSubmit (e) {
@@ -99,9 +80,20 @@ function handleFormAddSubmit (e) {
   const link = linkInput.value;
   const card = {name,link};
   createCard(card);
-  hideAddPopup();
+  hidePopup(popupAddPhoto);
   }
 
-
+editProfile.addEventListener('click', () => {
+  popupEdit.classList.add('popup_opened');
+  nameInput.value = nameProfile.textContent;
+  jobInput.value = jobProfile.textContent;
+});
+addPhoto.addEventListener('click', () => {
+  popupAddPhoto.classList.add('popup_opened');
+  placeInput.value = '';
+  linkInput.value = '';
+});
+closeProfile.addEventListener('click', () => hidePopup(popupEdit));
+closeAddPhoto.addEventListener('click', () => hidePopup(popupAddPhoto));
 formElement.addEventListener('submit', handleFormEditSubmit);
 form.addEventListener('submit', handleFormAddSubmit)
