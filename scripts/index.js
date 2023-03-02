@@ -90,7 +90,11 @@ function handleFormAddSubmit (e) {
   const name = placeInput.value;
   const link = linkInput.value;
   const card = {name,link};
+  if (name == ''|| link == '') {
+   hidePopup(popupAddPhoto);
+  } else {
   createCard(card);
+  }
   hidePopup(popupAddPhoto);
   }
 
