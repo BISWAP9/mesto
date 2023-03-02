@@ -105,5 +105,6 @@ addPhoto.addEventListener('click', () => {
 });
 closeProfile.addEventListener('click', () => hidePopup(popupEdit));
 closeAddPhoto.addEventListener('click', () => hidePopup(popupAddPhoto));
+closeView.addEventListener('click', () => hidePopup(popupView));
 formElement.addEventListener('submit', handleFormEditSubmit);
 form.addEventListener('submit', handleFormAddSubmit)

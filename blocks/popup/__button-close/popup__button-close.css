@@ -8,8 +8,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  right: -9%;
-  top: -12%;
+  right: -41px;
+  top: -41px;
   transition: opacity .5s ease-in;
   padding: 0;
 }
@@ -23,7 +23,7 @@
   .popup__button-close {
     width: 20px;
     height: 20px;
-    right: -1%;
-    top: -10%;
+    right: 1px;
+    top: -35px;
   }
 }
