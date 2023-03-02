@@ -1,12 +1,12 @@
 .popup__container-view {
   padding: 0;
   margin: 0;
-  width: auto;
-  height: auto;
+  min-height: 562px;
   border-radius: 0;
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  position: relative;
 }
 
 
