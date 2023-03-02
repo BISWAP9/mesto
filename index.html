@@ -58,10 +58,18 @@
       <h3 class="popup__title">Новое место</h3>
       <form class="popup__form" name="popup-form">
         <input type="text" placeholder="Название" class="popup__input popup__input_value_place" name="popup-place">
-        <input type="text" placeholder="Ссылка на картинку" class="popup__input popup__input_value_link"
+        <input type="url" placeholder="Ссылка на картинку" class="popup__input popup__input_value_link"
           name="popup-link">
         <button class="popup__button-save" type="submit">Создать</button>
       </form>
+    </div>
+  </section>
+
+  <section class="popup popup__photo-view">
+    <div class="popup__container popup__container-view">
+      <button class="popup__button-close" type="button"></button>
+      <img src="#" alt="#" class="popup__image">
+      <p class="popup__image-title"></p>
     </div>
   </section>
 

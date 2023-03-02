@@ -14,6 +14,11 @@ let form = popupAddPhoto.querySelector('.popup__form');
 let placeInput = popupAddPhoto.querySelector('.popup__input_value_place');
 let linkInput = popupAddPhoto.querySelector('.popup__input_value_link');
 
+let popupView = document.querySelector('.popup__photo-view');
+let closeView = popupView.querySelector('.popup__button-close');
+let imageView = popupView.querySelector('.popup__image');
+let titleView = popupView.querySelector('.popup__image-title');
+
 let elements = document.querySelector('.elements');
 
 const initialCards = [
@@ -50,6 +55,12 @@ const createCard = (card) => {
   let cardLink = cardTemplate.querySelector('.element__photo');
   cardLink.setAttribute('src', card.link);
   cardLink.alt = `${card.name}`;
+  cardLink.addEventListener('click', () => {
+    popupView.classList.add('popup_opened');
+    titleView.textContent = card.name;
+    imageView.src = `${card.link}`;
+    imageView.alt = `${card.name}`;
+  });
   let likeButton = cardTemplate.querySelector('.element__button-like');
   likeButton.addEventListener('click', (e) => {
     e.target.classList.toggle('element__button-like_active');
@@ -90,8 +101,7 @@ editProfile.addEventListener('click', () => {
 });
 addPhoto.addEventListener('click', () => {
   popupAddPhoto.classList.add('popup_opened');
-  placeInput.value = '';
-  linkInput.value = '';
+  form.reset();
 });
 closeProfile.addEventListener('click', () => hidePopup(popupEdit));
 closeAddPhoto.addEventListener('click', () => hidePopup(popupAddPhoto));

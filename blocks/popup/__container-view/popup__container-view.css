@@ -1,0 +1,10 @@
+.popup__container-view {
+  padding: 0;
+  margin: 0;
+  min-width: auto;
+  min-height: auto;
+  border-radius: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
