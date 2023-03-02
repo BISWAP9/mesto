@@ -78,7 +78,7 @@ const createCard = (card) => {
   return cardTemplate;
 }
 
-initialCards.forEach(function (cards) {
+initialCards.forEach( (cards) => {
   const newCard = createCard(cards);
   elements.append(newCard);
 });
@@ -96,7 +96,7 @@ function handleFormAddSubmit (e) {
   const name = placeInput.value;
   const link = linkInput.value;
   const card = {name,link};
-  if (name === '' || link === '') {
+  if (name == '' || link == '') {
     hidePopup(popupAddPhoto);
   } else {
   elements.prepend(createCard(card));
