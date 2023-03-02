@@ -1,5 +1,5 @@
 let editProfile = document.querySelector('.profile__button-edit');
-let popupEdit = document.querySelector('.popup__edit');
+let popupEdit = document.querySelector('.popup_edit');
 let closeProfile = popupEdit.querySelector('.popup__button-close');
 let nameProfile = document.querySelector('.profile__title');
 let jobProfile = document.querySelector('.profile__subtitle');
@@ -7,14 +7,14 @@ let formElement = popupEdit.querySelector('.popup__form');
 let nameInput = popupEdit.querySelector('.popup__input_value_name');
 let jobInput = popupEdit.querySelector('.popup__input_value_job');
 
-let popupAddPhoto = document.querySelector('.popup__add');
+let popupAddPhoto = document.querySelector('.popup_add');
 let addPhoto = document.querySelector('.profile__button-add');
 let closeAddPhoto = popupAddPhoto.querySelector('.popup__button-close');
 let form = popupAddPhoto.querySelector('.popup__form');
 let placeInput = popupAddPhoto.querySelector('.popup__input_value_place');
 let linkInput = popupAddPhoto.querySelector('.popup__input_value_link');
 
-let popupView = document.querySelector('.popup__photo-view');
+let popupView = document.querySelector('.popup_view');
 let closeView = popupView.querySelector('.popup__button-close');
 let imageView = popupView.querySelector('.popup__image');
 let titleView = popupView.querySelector('.popup__image-title');
