@@ -79,8 +79,7 @@ const createCard = (card) => {
 }
 
 initialCards.forEach( (cards) => {
-  const newCard = createCard(cards);
-  elements.append(newCard);
+  elements.append(createCard(cards));
 });
 
 
